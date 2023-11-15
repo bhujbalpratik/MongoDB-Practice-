@@ -41,7 +41,10 @@ export const userPostLogin = async (req, res) => {
 
     const isPasswordMatch = user.password === password;
 
-    if (!isPasswordMatch) return res.render("userLogin", { title: "loginPage", msg: "gandu password incorrect ahe na !" });
-    return res.redirect("/");
+    if (!isPasswordMatch) return res.render("userLogin", { title: "loginPage", msg: "You Enter Incorrect Password" });
+    return res.render("index", {
+        title: "Home Page",
+        msg: `Hello, ${user.name}`
+    });
 }
 
