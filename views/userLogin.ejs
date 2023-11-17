@@ -10,21 +10,22 @@
 </head>
 
 <body>
-    <center>
-        <h1>Login</h1>
-        <form action="/user/login" method="post">
-            <input type="email" id="" placeholder="Enter Your Email" name="email">
-            <br><br>
-            <input type="password" id="" placeholder="Enter Your Password" name="password">
-            <p style="color: red;">
-                <%=locals.msg%>
-            </p>
-            <p style="color : blue">Forgot Password ?</p>
-            <br><br>
-            <input type="submit" id="" value="Submit">
-        </form>
-
-    </center>
+    <fieldset style="display: block; margin: auto; width: 20%; margin-top: 100px;">
+        <legend align="center">Login</legend>
+        <center>
+            <form action="/user/login" method="post">
+                <input type="email" id="" placeholder="Enter Your Email" name="email">
+                <br><br>
+                <input type="password" id="" placeholder="Enter Your Password" name="password">
+                <p style="color: red;">
+                    <%=locals.msg%>
+                </p>
+                <p style="color : blue">Forgot
+                    Password ?</p>
+                <input type="submit" id="" value="Submit">
+            </form>
+        </center>
+    </fieldset>
 </body>
 
 </html>
